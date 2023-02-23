@@ -1,0 +1,31 @@
+@prefix m:  <http://www.dke.uni-linz.ac.at/m-contexts#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.dhp.lbg.ac.at/JITAIs/> .
+
+@base <http://www.dhp.lbg.ac.at/JITAIs/> .
+
+<Contexts> {
+    <JITAI> rdf:type m:AbstractContext .
+    <JITAI-HEARTStudy> rdf:type m:AbstractContext ; m:subContextOf <JITAI> .
+    <JITAI-Jane> rdf:type m:AbstractContext ; m:subContextOf <JITAI-HEARTStudy> .
+    <JITAI-Jane20230223> rdf:type m:ConcreteContext ; m:subContextOf <JITAI-Jane> .
+}
+
+<JITAI> {
+
+}
+
+<JITAI-HEARTStudy> {
+    <WeatherObservation> rdf:type <ObservationType> ; rdfs:subClassOf <Observation> .
+}
+
+<JITAI-Jane> {
+
+}
+
+<JITAI-Jane20230223> {
+
+}
